@@ -1,86 +1,106 @@
-## Project required dependency
+# Sushi React + Tailwind
 
-- React
-- Tailwindcss
+## What is Sushi
+
+Sushi Design System is designed to create seamless collaboration across teams, providing the tools to build outstanding user experiences for SET co-workers and listed companies.
+
+- **Developers:** Access pre-built HTML/CSS components to speed up product and feature development.
+- **Designers:** Utilize Figma components for prototype creation.
+
+Main Sushi repository: [Sushi HTML/CSS Components](https://github.com/sushiui/sushi)
+
+---
+
+## About this Project
+
+This project integrates the Sushi Design System with React and Tailwind CSS.
+
+- Some components leverage the original Sushi CSS.
+- Others are entirely rewritten in Tailwind CSS.
+- **Goal:** Transition all components to Tailwind for improved efficiency and customization.
+
+This repository: [Sushi React + Tailwind](https://github.com/sushiui/sushi-react-tailwind)
 
 ---
 
 ## How to install
 
-### npm
+### Using npm
 
-```npm
+```bash
 npm i @mis/sushi-tailwind-css
-```
-
-```
 npm config set strict-ssl false
 ```
 
-#### Registry setup
+Add your authentication token to the .npmrc file
 
-@mis:registry=https://git.alm.set/api/v4/projects/2659/packages/npm/
-
-'//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken'="sZ8F-zHeuJQkTzKsTYES"
+```
+@mis:registry=https://git.alm.set/api/v4/projects/2659/packages/npm/ '//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken'="<AUTHENTICATION-TOKEN>"
+```
 
 ### yarn
 
-```yarn
+```bash
 yarn add @mis/sushi-tailwind-css
+yarn config set "strict-ssl" false
 ```
 
-unable to verify the first certificate
-yarn config set "strict-ssl" false
+Add your authentication token to the .yarnrc file
 
+```bash
 "@mis:registry" "https://git.alm.set/api/v4/packages/npm/"
-"//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken" "sZ8F-zHeuJQkTzKsTYES"
+"//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken" "<AUTHENTICATION-TOKEN>"
+```
 
 ---
 
-## How to setup to your project
+## Project Setup
 
-1. Require Sushi as a plugin inside the tailwind.config.js file:
+1. Add Sushi as a Tailwind plugin in `tailwind.config.js`:
 
-```
+```javascript
 module.exports = {
-
-    plugins: [
-        require('@mis/sushi-tailwind-react/plugin')
-    ]
-
-}
+  plugins: [require("@mis/sushi-tailwind-react/plugin")],
+};
 ```
 
-2. Additionally to your own content data you should add Sushi to apply the classes from the interactive elements in the tailwind.config.js file:
+2. Update the content section in `tailwind.config.js` to include Sushi components:
 
-```s
+```javascript
 module.exports = {
-
-    content: [
-        "/node_modules/@mis/sushi-tailwind-react/dist/**/*.js"
-    ]
-
-}
+  content: ["/node_modules/@mis/sushi-tailwind-react/dist/**/*.js"],
+};
 ```
 
-3. Import the Sushi file inside your main index.js file:
+3. Import the Sushi file inside your main `index.js` file:
 
+```javascript
+import "@mis/sushi-tailwind-react/dist/sushi.css";
 ```
-import '@mis/sushi-tailwind-react/dist/sushi.css';
 
-```
+---
 
--- esg
+[Note]
+
+### ESG
+
+```bash
 cd esg-front/node_modules/react
 npm link
+```
 
--- sushi
+### sushi
+
+```bash
 cd sushi-tailwind-react
 npm link react
 npm run build
+```
 
--- esg
+### ESG
+
+```bash
 cd esg-front
 npm run start
-
 export NODE_OPTIONS=--openssl-legacy-provider
+```
