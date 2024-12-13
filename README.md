@@ -34,8 +34,15 @@ npm config set strict-ssl false
 
 Add your authentication token to the .npmrc file
 
-```
-@mis:registry=https://git.alm.set/api/v4/projects/2659/packages/npm/ '//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken'="<AUTHENTICATION-TOKEN>"
+```npmrc
+# Set URL for your scoped packages.
+ @mis:registry=https://git.alm.set/api/v4/projects/2659/packages/npm/
+
+# Add the token for the scoped packages URL. This will allow you to download
+'//git.alm.set/api/v4/packages/npm/:_authToken'="${GITLAB_AUTH_TOKEN}"
+
+# Add token for uploading to the registry.
+'//git.alm.set/api/v4/projects/2659/packages/npm/:_authToken'="${GITLAB_AUTH_TOKEN}"
 ```
 
 ### yarn
@@ -47,9 +54,12 @@ yarn config set "strict-ssl" false
 
 Add your authentication token to the .yarnrc file
 
-```bash
-"@mis:registry" "https://git.alm.set/api/v4/packages/npm/"
-"//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken" "<AUTHENTICATION-TOKEN>"
+```json
+# Set URL for your scoped packages.
+@mis:registry" "https://git.alm.set/api/v4/packages/npm/
+
+# Add the token for the scoped packages URL.
+//git.alm.set/api/v4/projects/2659/packages/npm/:\_authToken" "<AUTHENTICATION-TOKEN>"
 ```
 
 ---
