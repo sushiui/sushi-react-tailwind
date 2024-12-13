@@ -1,0 +1,67 @@
+/* .rc-menu-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+
+  word-break: normal;
+  white-space: normal;
+}
+
+.rc-menu-vertical > .rc-menu-item {
+  padding: 0;
+}
+.rc-menu-inline > .rc-menu-submenu > .rc-menu-submenu-title {
+  padding: 4px 8px !important;
+} */
+/* .rc-menu.rc-menu-inline {
+  list-style: none;
+  margin: 0;
+}
+
+.rc-menu-inline .rc-menu-hidden {
+  display: none;
+}
+
+.rc-menu-submenu-selected {
+  background-color: initial;
+} */
+
+/* .rc-menu-item.rc-menu-item-selected,
+.rc-menu-submenu-active > .rc-menu-submenu-title,
+:hover.rc-menu-item {
+  background-color: #fef3e6;
+} */
+
+/* inline */
+.rc-menu-inline .rc-menu-item,
+.rc-menu-inline .rc-menu-submenu-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+
+  word-break: normal;
+  white-space: normal;
+}
+
+.rc-menu-inline .rc-menu-submenu-title {
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.rc-menu-inline .rc-menu-hidden {
+  display: none;
+}
+
+.rc-menu-inline .rc-menu-item.rc-menu-item-selected,
+.rc-menu-inline .rc-menu-submenu-active > .rc-menu-submenu-title,
+:hover.rc-menu-item {
+  background-color: #fef3e6;
+}
+
+.rc-menu-inline > .rc-menu-submenu > .rc-menu-submenu-title {
+  padding: 4px 8px !important;
+}

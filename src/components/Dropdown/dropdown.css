@@ -1,0 +1,45 @@
+.ss-dropdown .ss-select.ss-select-allow-clear > .ss-select-clear {
+  position: absolute;
+  right: 30px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+
+.ss-dropdown .ss-select .ss-select-arrow {
+  right: 5px;
+}
+
+.ss-dropdown .ss-select-arrow .material-icons-outlined {
+  font-size: 25px;
+}
+
+.ss-dropdown .ss-select.ss-select-allow-clear > .ss-select-clear > .ss-select-clear-icon {
+  font-size: 20px;
+  height: 25px;
+  line-height: 100%;
+}
+
+.ss-dropdown .ss-select.ss-select-allow-clear:hover > .ss-select-clear {
+  opacity: 1;
+}
+
+.ss-dropdown .ss-select.ss-select-allow-clear.ss-select-show-arrow:hover .ss-select-selection-item {
+  padding-right: 40px;
+}
+
+.ss-select-item-option-content {
+  text-decoration: none;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.ss-dropdown .ss-select-selection-placeholder {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

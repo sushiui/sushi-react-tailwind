@@ -1,0 +1,61 @@
+import { LayoutExample, SiderExample, CustomSiderExample, ResponsiveExample } from "./_LayoutExample";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import Layout from "./Layout";
+
+<Meta title="Layout/Layout" component={Layout} />
+
+# Layout
+
+<div className="subheading">Example</div>
+
+<Story name="example">
+  <LayoutExample></LayoutExample>
+</Story>
+
+<Canvas>
+  <Story
+    height="300px"
+    padding="0"
+    name="sider"
+    parameters={{
+      docs: {
+        inlineStories: false,
+        iframeHeight: 300,
+      },
+    }}
+  >
+    <SiderExample />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    height="300px"
+    padding="0"
+    name="custom sider"
+    parameters={{
+      docs: {
+        inlineStories: false,
+        iframeHeight: 300,
+      },
+    }}
+  >
+    <CustomSiderExample />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    height="300px"
+    padding="0"
+    name="resposive"
+    parameters={{
+      docs: {
+        inlineStories: false,
+        iframeHeight: 300,
+      },
+    }}
+  >
+    <ResponsiveExample />
+  </Story>
+</Canvas>
