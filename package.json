@@ -41,7 +41,7 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "publish:gitlab": "GITLAB_AUTH_TOKEN=sZ8F-zHeuJQkTzKsTYES npm publish"
+    "publish:gitlab": "GITLAB_AUTH_TOKEN=<GITLAB_AUTH_TOKEN> npm publish"
   },
   "author": "",
   "license": "ISC",

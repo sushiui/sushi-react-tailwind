@@ -90,6 +90,38 @@ import "@mis/sushi-tailwind-react/dist/sushi.css";
 
 ---
 
+## Contribution Guide
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the storybook
+
+```bash
+npm run storybook
+```
+
+### Run the tests
+
+```bash
+npm run test
+```
+
+### Build the project
+
+Prepare the project for production
+
+```bash
+npm run prepare
+```
+
+## Let us know if you have any questions or need further guidance! 😊
+
+---
+
 [Note]
 
 ### ESG
